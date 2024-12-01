@@ -1,0 +1,27 @@
+@use "variable" as *;
+@use "mq" as *;
+
+.mobile-menu {
+    z-index: 100;
+    &__btn {
+        background-color: unset;
+        border: none;
+        cursor: pointer;    
+
+        @include mq(lg) {
+            display: none;
+        }
+
+        & span {
+            display: block;
+            width: 35px;
+            height: 2px;
+            margin-bottom: 9px;
+            background-color: $cBlack;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
