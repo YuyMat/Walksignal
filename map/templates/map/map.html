@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_static %}
+<!-- leaflet -->
+<link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}">
+<script src="{% static 'leaflet/leaflet.js' %}" defer></script>
+
+<!-- leaflet UserMarker -->
+<link rel="stylesheet" href="{% static 'leaflet-marker/leaflet.usermarker.css' %}" />
+<script src="{% static 'leaflet-marker/leaflet.usermarker.js' %}" defer></script>
+
+<!-- css -->
+<link rel="stylesheet" href="{% static 'map/css/map.css' %}">
+
+<!-- js -->
+<script src="{% static 'map/js/map.js' %}"defer></script>
+{% endblock extra_static %}
+
+{% block title %}
+WalkSignal - マップ
+{% endblock title %}
+
+{% block main %}
+<div id="map"></div>
+{% endblock main %}

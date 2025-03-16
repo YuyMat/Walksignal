@@ -1,0 +1,123 @@
+@use "variable" as *;
+@use "mq" as *;
+@use "mobile-menu" as *;
+@use "parts" as *;
+
+html {
+    font-family: "Kameron", "M PLUS 1", serif;
+    font-weight: 500;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    background-color: $cWhite;
+
+    &__container {
+        position: relative;
+        z-index: 0;
+        height: 100px;
+        @extend .content-width;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-basis: 40%;
+        // height: 100px;
+    }
+
+    &__ul {
+        padding-left: 0 !important;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+
+        display: none;
+        @include mq(lg) {
+            display: flex;
+        }
+    }
+    
+    &__li {
+        list-style: none;
+        flex-basis: 32%;
+
+        &.bookmark span{
+            display: inline-block;
+        }
+    }
+
+    & .mobile-menu {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        align-items: center;
+    }
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+
+    &__container {
+        @extend .content-width;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 100px;
+
+        & .set-sea {
+            &__bookmark {
+                width: 100px;
+                height: 100px;
+                background-color: black;
+            }
+        }
+
+        & .map {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    }
+}
+
+.logo {
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 30%;
+
+    font-size: 25px;
+    @include mq(md) {
+        font-size: 30px;
+    }
+
+    &__img {
+        width: 1.3em;
+        margin-right: 5px;
+    }
+
+    &__signal {
+        color: $cGreen;
+        padding-left: 4px;
+    }
+}

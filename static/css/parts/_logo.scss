@@ -1,0 +1,33 @@
+@use "variable" as *;
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    font-size: 50px;
+    font-family: "Jersey 15", serif;
+
+    & a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: fit-content;
+    }
+
+    &__img {
+        height: .8em;
+    }
+
+    &__letter {
+        font-size: .7em;
+        margin-left: 4px;
+        letter-spacing: .6px;
+        color: $cBlack;
+    }
+}

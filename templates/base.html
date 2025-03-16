@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}未入力{% endblock title %}</title>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap"
+        rel="stylesheet">
+
+    {% load static %}
+    <!-- reset css -->
+    <link rel="stylesheet" href="{% static 'css/css-reset.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/main.js' %}" defer></script>
+    {% block extra_static %}{% endblock extra_static %}
+</head>
+
+<body>
+    <header>
+        {% include "header.html" %}
+    </header>
+
+    <main>
+        {% block main %}{% endblock main %}
+    </main>
+
+    <footer>
+        {% include "footer.html" %}
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{% load static %}
+<div class="header">
+    <div class="header__container">
+        {% include "logo.html" %}
+    </div>
+</div>
+</div>
+
+<div class="hamburger">
+    <div class="hamburger__container">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+    </div>
+</div>
+
+<div class="menu">
+    <div class="menu__container">
+        {% include "logo.html" %}
+        <ul class="menu__inner">
+            <li><a href="{% url 'accounts:login' %}">
+                <img src="{% static 'images/login.png' %}">
+                <span>ログイン・新規登録</span>
+            </a></li>
+            <li><a href="{% url 'map:top' %}">
+                <img src="{% static 'images/map.png' %}">
+                <span>WalkSignal - マップ</span>
+            </a></li>
+            <li><a href="">
+                <img src="{% static 'images/contact.png' %}">
+                <span>お問い合わせ</span>
+            </a></li>
+        </ul>
+    </div>
+</div>
