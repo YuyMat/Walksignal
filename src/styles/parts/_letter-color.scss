@@ -1,0 +1,9 @@
+@use "variable" as *;
+
+.letter-green {
+    color: $cGreen;
+}
+
+.letter-red {
+    color: $cRed;
+}
